@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your photo booth with Booth Drop. Easy online booking for weddings, corporate events, and parties.">
+  <meta name="keywords" content="book photo booth, booking, available dates, reserve">
+  <title>Book Now | Booth Drop Photo Booth Hire</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">Booth<span>Drop</span></div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#booking" class="btn btn-primary btn-sm">Book Now</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Book Your Photo Booth</h1>
+      <p>Simple, fast, and secure booking for your special event</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Packages -->
+<section>
+  <div class="container">
+    <h2>Choose Your Package</h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="pricing-card-icon">💍</div>
+        <h3>Wedding</h3>
+        <div class="price">£499</div>
+        <p class="price-range">4-6 hours</p>
+        <ul>
+          <li>Unlimited photos & prints</li>
+          <li>Custom backdrop design</li>
+          <li>Professional attendant</li>
+          <li>Digital copies included</li>
+          <li>Guest book option</li>
+          <li>Premium editing</li>
+        </ul>
+        <a href="#booking" data-package="wedding" class="btn btn-primary btn-block" style="margin-top: 2rem;">Select Package</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-card-icon">🏢</div>
+        <h3>Corporate Event</h3>
+        <div class="price">£349</div>
+        <p class="price-range">2-8 hours</p>
+        <ul>
+          <li>Custom branding included</li>
+          <li>Green screen options</li>
+          <li>Social media sharing</li>
+          <li>Digital & USB delivery</li>
+          <li>Professional operator</li>
+          <li>Flexible duration</li>
+        </ul>
+        <a href="#booking" data-package="corporate" class="btn btn-primary btn-block" style="margin-top: 2rem;">Select Package</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-card-icon">🎉</div>
+        <h3>Party Package</h3>
+        <div class="price">£299</div>
+        <p class="price-range">3-6 hours</p>
+        <ul>
+          <li>Fun, colorful backdrop</li>
+          <li>Instant color prints</li>
+          <li>Animated overlays</li>
+          <li>Props & accessories</li>
+          <li>Digital delivery</li>
+          <li>Guest friendly</li>
+        </ul>
+        <a href="#booking" data-package="party" class="btn btn-primary btn-block" style="margin-top: 2rem;">Select Package</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking Form -->
+<section id="booking" style="background: var(--light);">
+  <div class="container">
+    <h2>Booking Information</h2>
+    <form id="bookingForm" class="contact-form">
+      <h3 style="margin-top: 0;">1. Event Details</h3>
+      
+      <div class="form-group">
+        <label for="eventType">Event Type *</label>
+        <select id="eventType" name="eventType" required>
+          <option value="">-- Select Event Type --</option>
+          <option value="wedding">Wedding</option>
+          <option value="corporate">Corporate Event</option>
+          <option value="party">Party / Birthday</option>
+          <option value="anniversary">Anniversary</option>
+          <option value="engagement">Engagement Party</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="eventDate">Event Date *</label>
+        <input type="date" id="eventDate" name="eventDate" required min="">
+      </div>
+
+      <div class="form-group">
+        <label for="eventTime">Event Start Time *</label>
+        <input type="time" id="eventTime" name="eventTime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="duration">Booth Duration *</label>
+        <select id="duration" name="duration" required>
+          <option value="">-- Select Duration --</option>
+          <option value="2hours">2 hours</option>
+          <option value="3hours">3 hours</option>
+          <option value="4hours">4 hours</option>
+          <option value="5hours">5 hours</option>
+          <option value="6hours">6 hours</option>
+          <option value="8hours">8 hours (Full Day)</option>
+          <option value="custom">Custom Duration</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="guests">Expected Number of Guests</label>
+        <input type="number" id="guests" name="guests" placeholder="50" min="1">
+      </div>
+
+      <div class="form-group">
+        <label for="location">Event Location / Venue *</label>
+        <input type="text" id="location" name="location" required placeholder="Venue name and address">
+      </div>
+
+      <h3 style="margin-top: 2rem;">2. Your Information</h3>
+
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+44">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Special Requests or Add-ons</label>
+        <textarea id="message" name="message" placeholder="Green screen, video booth, custom overlays, etc."></textarea>
+      </div>
+
+      <div class="form-group" style="background: var(--light); padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary);">
+        <input type="checkbox" id="terms" name="terms" required style="margin-right: 8px;">
+        <label for="terms" style="margin-bottom: 0;">I agree to the terms and conditions and understand that Booth Drop will contact me to confirm availability and booking details.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Booking Request</button>
+      
+      <p style="text-align: center; margin-top: 1rem; color: var(--text-light);">✓ We'll confirm availability within 2 hours</p>
+    </form>
+  </div>
+</section>
+
+<!-- What Happens Next -->
+<section>
+  <div class="container">
+    <h2>What Happens Next?</h2>
+    <div class="row">
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">1️⃣</div>
+        <h3>Submit Your Request</h3>
+        <p>Fill out the booking form with your event details and information.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">2️⃣</div>
+        <h3>Confirmation Email</h3>
+        <p>We'll send you a confirmation email within 2 hours confirming availability.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">3️⃣</div>
+        <h3>Payment & Contract</h3>
+        <p>We'll arrange payment (£99 deposit secures your date, balance due 1 week before).</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">4️⃣</div>
+        <h3>Event Day!</h3>
+        <p>We arrive 30-60 minutes early, set up, and ensure everything is perfect.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">5️⃣</div>
+        <h3>Photo Delivery</h3>
+        <p>All photos delivered digitally within 5 business days of your event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--light);">
+  <div class="container">
+    <h2>Booking FAQs</h2>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="faq-item">
+        <div class="faq-question">What's included in the package price?</div>
+        <div class="faq-answer">
+          <p>All packages include setup/breakdown, attendant for the duration, instant prints, and digital copies. Premium add-ons are additional.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I pay?</div>
+        <div class="faq-answer">
+          <p>We accept bank transfer, card payment via PayPal, or cheque. A £99 deposit secures your booking, with balance due 1 week before your event.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I reschedule my booking?</div>
+        <div class="faq-answer">
+          <p>Yes! We allow rescheduling up to 7 days before your event at no charge. After that, we may charge a rescheduling fee.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What's your cancellation policy?</div>
+        <div class="faq-answer">
+          <p>Cancellations made 14+ days before your event get a full refund. Less than 14 days: deposit is non-refundable but transferable to another date.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you require a contract?</div>
+        <div class="faq-answer">
+          <p>Yes, we'll send a simple contract after booking confirmation outlining all terms and details.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I book same-day or rush bookings?</div>
+        <div class="faq-answer">
+          <p>Contact us directly at +44 (0) 1582 365252 for rush bookings! We may be able to accommodate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Indicators -->
+<section>
+  <div class="container">
+    <h2>Why Book With Confidence</h2>
+    <div class="row">
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">✓</div>
+        <h3>Professional Team</h3>
+        <p>Fully insured and experienced operators since 2014. Your event is in safe hands.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
+        <h3>Guarantees</h3>
+        <p>If we can't make it, full refund. If equipment fails, we bring backup immediately.</p>
+      </div>
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⭐</div>
+        <h3>Rated 4.9/5</h3>
+        <p>500+ events completed with consistently excellent customer reviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Questions Before Booking?</h2>
+    <p>Call us on +44 (0) 1582 365252 or email info@boothdrop.co.uk</p>
+    <a href="contact.html" class="btn btn-primary btn-lg" style="background: white; color: #e91e63;">Contact Us</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Booth Drop</h4>
+        <p>Professional photo booth hire for unforgettable events. Based in Luton, serving the UK.</p>
+        <div class="social-links">
+          <a href="https://facebook.com/boothdrop" target="_blank" aria-label="Facebook">f</a>
+          <a href="https://instagram.com/boothdrop" target="_blank" aria-label="Instagram">📷</a>
+          <a href="https://twitter.com/boothdrop" target="_blank" aria-label="Twitter">𝕏</a>
+          <a href="https://tiktok.com/@boothdrop" target="_blank" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#weddings">Wedding Photo Booths</a></li>
+          <li><a href="services.html#corporate">Corporate Events</a></li>
+          <li><a href="services.html#parties">Party Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="locations/luton.html">Luton</a></li>
+          <li><a href="locations/milton-keynes.html">Milton Keynes</a></li>
+          <li><a href="locations/london.html">London</a></li>
+          <li><a href="locations/watford.html">Watford</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 <a href="tel:+441582365252">+44 (0) 1582 365252</a></li>
+          <li>📧 <a href="mailto:info@boothdrop.co.uk">info@boothdrop.co.uk</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="#booking">Book Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Booth Drop. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Set minimum date to today
+document.addEventListener('DOMContentLoaded', function() {
+  const dateInput = document.getElementById('eventDate');
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+
+  // Listen for package selection from pricing cards
+  document.querySelectorAll('[data-package]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('eventType').value = this.getAttribute('data-package');
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+});
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

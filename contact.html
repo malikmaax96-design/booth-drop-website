@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Booth Drop - Call, email, or fill out our contact form. We'd love to hear from you!">
+  <meta name="keywords" content="contact, photo booth, inquiry, booking">
+  <title>Contact | Booth Drop Photo Booth Hire</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">Booth<span>Drop</span></div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="booking.html" class="btn btn-primary btn-sm">Book Now</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="sticky-booking">
+  <button class="btn btn-primary" data-scroll-to="#form">💬 Send Message</button>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Contact us with any questions!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Info -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact Information</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <h3>Phone</h3>
+        <p><a href="tel:+441582365252" style="font-size: 1.1rem; font-weight: 600;">+44 (0) 1582 365252</a></p>
+        <p style="font-size: 0.9rem;">Mon-Fri: 9am-6pm, Sat-Sun: 10am-4pm</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📧</div>
+        <h3>Email</h3>
+        <p><a href="mailto:info@boothdrop.co.uk" style="font-size: 1.1rem; font-weight: 600;">info@boothdrop.co.uk</a></p>
+        <p style="font-size: 0.9rem;">Response within 2 hours</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <h3>Location</h3>
+        <p style="font-weight: 600;">Luton, England</p>
+        <p style="font-size: 0.9rem;">UK Wide Service Area</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="form" style="background: var(--light);">
+  <div class="container">
+    <h2>Send Us a Message</h2>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+44">
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="What is this about?">
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required placeholder="Tell us more..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="eventType">Interested In:</label>
+        <select id="eventType" name="eventType">
+          <option value="">Select an option</option>
+          <option value="wedding">Wedding Photo Booth</option>
+          <option value="corporate">Corporate Event</option>
+          <option value="party">Party Package</option>
+          <option value="other">Other/General Inquiry</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Service Area Map -->
+<section>
+  <div class="container">
+    <h2>Our Service Area</h2>
+    <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">We serve Luton and 60 miles radius, covering:</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+      <div class="card">
+        <h3>🎯 Central Area</h3>
+        <p>Luton • Dunstable • Houghton Regis</p>
+      </div>
+      <div class="card">
+        <h3>📍 Hertfordshire</h3>
+        <p>Watford • Hemel Hempstead • St Albans</p>
+      </div>
+      <div class="card">
+        <h3>🏙️ Bedfordshire</h3>
+        <p>Bedford • Kempston • Leighton Buzzard</p>
+      </div>
+      <div class="card">
+        <h3>🌆 Nearby Areas</h3>
+        <p>Stevenage • Milton Keynes • London fringes</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 2rem; color: var(--text-light);">Don't see your location? <a href="#form" style="color: var(--primary); font-weight: 600;">Contact us</a> - we may be able to help!</p>
+  </div>
+</section>
+
+<!-- FAQ for Contact -->
+<section style="background: var(--light);">
+  <div class="container">
+    <h2>Quick Answers</h2>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="faq-item">
+        <div class="faq-question">What's the best way to contact you?</div>
+        <div class="faq-answer">
+          <p>We respond fastest to emails at info@boothdrop.co.uk. For urgent matters, call us at +44 (0) 1582 365252.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How quickly do you respond?</div>
+        <div class="faq-answer">
+          <p>We aim to respond to all emails within 2 hours during business hours (9am-6pm Mon-Fri).</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can you travel outside your service area?</div>
+        <div class="faq-answer">
+          <p>Possibly! Contact us with your location and event details, and we'll discuss options and any travel fees.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer site visits?</div>
+        <div class="faq-answer">
+          <p>Yes, we can arrange venue visits for larger events. Please mention this when you contact us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Start?</h2>
+    <p>Or proceed directly to booking</p>
+    <a href="booking.html" class="btn btn-primary btn-lg" style="background: white; color: #e91e63;">Go to Booking</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Booth Drop</h4>
+        <p>Professional photo booth hire for unforgettable events. Based in Luton, serving the UK.</p>
+        <div class="social-links">
+          <a href="https://facebook.com/boothdrop" target="_blank" aria-label="Facebook">f</a>
+          <a href="https://instagram.com/boothdrop" target="_blank" aria-label="Instagram">📷</a>
+          <a href="https://twitter.com/boothdrop" target="_blank" aria-label="Twitter">𝕏</a>
+          <a href="https://tiktok.com/@boothdrop" target="_blank" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#weddings">Wedding Photo Booths</a></li>
+          <li><a href="services.html#corporate">Corporate Events</a></li>
+          <li><a href="services.html#parties">Party Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="locations/luton.html">Luton</a></li>
+          <li><a href="locations/milton-keynes.html">Milton Keynes</a></li>
+          <li><a href="locations/london.html">London</a></li>
+          <li><a href="locations/watford.html">Watford</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 <a href="tel:+441582365252">+44 (0) 1582 365252</a></li>
+          <li>📧 <a href="mailto:info@boothdrop.co.uk">info@boothdrop.co.uk</a></li>
+          <li><a href="#contact">Contact Form</a></li>
+          <li><a href="booking.html">Book Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Booth Drop. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
