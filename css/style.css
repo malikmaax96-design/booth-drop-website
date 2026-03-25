@@ -1080,7 +1080,76 @@ section h2::after {
   white-space: nowrap;
 }
 
+/* 5-column booth grid */
+.booth-types-grid--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Visual Booth Selector (booking form) */
+.booth-selector {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.booth-option {
+  cursor: pointer;
+  border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  background: var(--bg-white);
+  text-align: center;
+}
+
+.booth-option:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.booth-option input[type="radio"] {
+  display: none;
+}
+
+.booth-option input[type="radio"]:checked + .booth-option-inner {
+  background: linear-gradient(135deg, rgba(233,30,99,0.05) 0%, rgba(255,107,157,0.05) 100%);
+}
+
+.booth-option:has(input:checked) {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(233,30,99,0.15);
+}
+
+.booth-option-inner {
+  padding: 10px 8px;
+}
+
+.booth-option-inner img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.booth-option-inner .booth-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.booth-option-inner .booth-price {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
 /* Animations */
+
 
 @keyframes slideUp {
   from {
@@ -1135,7 +1204,19 @@ section h2::after {
   }
 
   .booth-types-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booth-types-grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booth-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booth-option-inner img {
+    height: 80px;
   }
 
   .gallery-preview-grid {

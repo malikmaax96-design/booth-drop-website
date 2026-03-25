@@ -39,56 +39,52 @@
   </div>
 </section>
 
-<!-- Pricing Packages -->
+<!-- Choose Your Booth -->
 <section>
   <div class="container">
-    <h2>Choose Your Package</h2>
-    <div class="pricing-cards">
-      <div class="pricing-card">
-        <div class="pricing-card-icon">💍</div>
-        <h3>Wedding</h3>
-        <div class="price">£499</div>
-        <p class="price-range">4-6 hours</p>
-        <ul>
-          <li>Unlimited photos & prints</li>
-          <li>Custom backdrop design</li>
-          <li>Professional attendant</li>
-          <li>Digital copies included</li>
-          <li>Guest book option</li>
-          <li>Premium editing</li>
-        </ul>
-        <a href="#booking" data-package="wedding" class="btn btn-primary btn-block" style="margin-top: 2rem;">Select Package</a>
-      </div>
-      <div class="pricing-card featured">
-        <div class="pricing-card-icon">🏢</div>
-        <h3>Corporate Event</h3>
-        <div class="price">£349</div>
-        <p class="price-range">2-8 hours</p>
-        <ul>
-          <li>Custom branding included</li>
-          <li>Green screen options</li>
-          <li>Social media sharing</li>
-          <li>Digital & USB delivery</li>
-          <li>Professional operator</li>
-          <li>Flexible duration</li>
-        </ul>
-        <a href="#booking" data-package="corporate" class="btn btn-primary btn-block" style="margin-top: 2rem;">Select Package</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-card-icon">🎉</div>
-        <h3>Party Package</h3>
-        <div class="price">£299</div>
-        <p class="price-range">3-6 hours</p>
-        <ul>
-          <li>Fun, colorful backdrop</li>
-          <li>Instant color prints</li>
-          <li>Animated overlays</li>
-          <li>Props & accessories</li>
-          <li>Digital delivery</li>
-          <li>Guest friendly</li>
-        </ul>
-        <a href="#booking" data-package="party" class="btn btn-primary btn-block" style="margin-top: 2rem;">Select Package</a>
-      </div>
+    <h2>Choose Your Booth</h2>
+    <p class="section-intro">Click on a booth to select it — all include unlimited prints, attendant &amp; full setup</p>
+    <div class="booth-selector">
+      <label class="booth-option" id="opt-lcd">
+        <input type="radio" name="boothSelectTop" value="LCD Pod">
+        <div class="booth-option-inner">
+          <img src="images/booth-lcd-pod.jpg" alt="LCD Pod">
+          <div class="booth-name">LCD Pod</div>
+          <div class="booth-price">From £299</div>
+        </div>
+      </label>
+      <label class="booth-option" id="opt-party">
+        <input type="radio" name="boothSelectTop" value="Party Booth">
+        <div class="booth-option-inner">
+          <img src="images/booth-party.jpg" alt="Party Booth">
+          <div class="booth-name">Party Booth</div>
+          <div class="booth-price">From £329</div>
+        </div>
+      </label>
+      <label class="booth-option" id="opt-selfie">
+        <input type="radio" name="boothSelectTop" value="Selfie Mirror Pod">
+        <div class="booth-option-inner">
+          <img src="images/booth-selfie-mirror.png" alt="Selfie Mirror Pod">
+          <div class="booth-name">Selfie Mirror Pod</div>
+          <div class="booth-price">From £349</div>
+        </div>
+      </label>
+      <label class="booth-option" id="opt-retro">
+        <input type="radio" name="boothSelectTop" value="Retro Pod">
+        <div class="booth-option-inner">
+          <img src="images/booth-retro-pod.png" alt="Retro Pod">
+          <div class="booth-name">Retro Pod</div>
+          <div class="booth-price">From £369</div>
+        </div>
+      </label>
+      <label class="booth-option" id="opt-magic">
+        <input type="radio" name="boothSelectTop" value="Magic Mirror">
+        <div class="booth-option-inner">
+          <img src="images/booth-magic-mirror.jpg" alt="Magic Mirror">
+          <div class="booth-name">Magic Mirror</div>
+          <div class="booth-price">From £399</div>
+        </div>
+      </label>
     </div>
   </div>
 </section>
@@ -99,7 +95,19 @@
     <h2>Booking Information</h2>
     <form id="bookingForm" class="contact-form">
       <h3 style="margin-top: 0;">1. Event Details</h3>
-      
+
+      <div class="form-group">
+        <label for="boothType">Booth Type *</label>
+        <select id="boothType" name="boothType" required>
+          <option value="">-- Select Booth Type --</option>
+          <option value="LCD Pod">LCD Pod (From £299)</option>
+          <option value="Party Booth">Party Booth (From £329)</option>
+          <option value="Selfie Mirror Pod">Selfie Mirror Pod (From £349)</option>
+          <option value="Retro Pod">Retro Pod (From £369)</option>
+          <option value="Magic Mirror">Magic Mirror (From £399)</option>
+        </select>
+      </div>
+
       <div class="form-group">
         <label for="eventType">Event Type *</label>
         <select id="eventType" name="eventType" required>
@@ -341,22 +349,36 @@
 </footer>
 
 <script>
-// Set minimum date to today
 document.addEventListener('DOMContentLoaded', function() {
+  // Set minimum date to today
   const dateInput = document.getElementById('eventDate');
-  const today = new Date().toISOString().split('T')[0];
-  dateInput.setAttribute('min', today);
+  if (dateInput) {
+    dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+  }
 
-  // Listen for package selection from pricing cards
-  document.querySelectorAll('[data-package]').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('eventType').value = this.getAttribute('data-package');
-      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+  // Sync visual booth selector → boothType dropdown
+  document.querySelectorAll('input[name="boothSelectTop"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      const boothDropdown = document.getElementById('boothType');
+      if (boothDropdown) {
+        boothDropdown.value = this.value;
+      }
+      // Smooth scroll to booking form
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // Sync boothType dropdown → visual selector
+  const boothDropdown = document.getElementById('boothType');
+  if (boothDropdown) {
+    boothDropdown.addEventListener('change', function() {
+      const matching = document.querySelector(`input[name="boothSelectTop"][value="${this.value}"]`);
+      if (matching) matching.checked = true;
+    });
+  }
 });
 </script>
 <script src="js/script.js"></script>
 </body>
 </html>
+
