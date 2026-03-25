@@ -237,12 +237,11 @@ a:hover {
 
 /* Hero Section */
 .hero {
-  background-color: #1a1a2e;
-  background-image: linear-gradient(135deg, rgba(15, 10, 30, 0.72) 0%, rgba(180, 20, 80, 0.45) 100%), url('../images/hero-bg.png');
+  background-color: #1a0a2e;
+  background-image: linear-gradient(135deg, rgba(15, 5, 30, 0.65) 0%, rgba(180, 20, 80, 0.40) 100%), url('../images/hero-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: white;
   padding: 130px 0;
   position: relative;
