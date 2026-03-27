@@ -3,476 +3,463 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium photo booth hire for weddings, corporate events, and parties in Luton and 60 miles radius. Unlimited prints, trained attendant & full setup included from £299.">
-  <meta name="keywords" content="photo booth hire Luton, wedding photobooth, corporate event hire, party photobooth UK">
-  <meta name="author" content="Booth Drop">
-
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Booth Drop - Premium Photo Booth Hire">
-  <meta property="og:description" content="From just £299 — Unlimited prints, trained attendant & full setup included. Based in Luton, serving the UK.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://boothdrop.co.uk/">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='50' fill='%23e91e63' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>📷</text></svg>">
-
-  <title>Booth Drop | Photo Booth Hire Luton — From £299</title>
+  <meta name="description" content="Premium photo booth hire for weddings, parties & corporate events. LCD Pod, Party Booth, Selfie Mirror, Retro Pod & Magic Mirror. From £299. Based in Luton, UK.">
+  <meta name="keywords" content="photo booth hire, photo booth luton, wedding photo booth, magic mirror hire, selfie pod UK, party photo booth">
+  <title>Booth Drop | Premium Photo Booth Hire — From £299</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Schema.org Markup for Local Business -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Booth Drop",
-    "image": "https://boothdrop.co.uk/images/logo.png",
-    "description": "Premium photo booth hire for weddings, corporate events, and parties",
-    "url": "https://boothdrop.co.uk",
-    "telephone": "+44 (0) 1582 365252",
-    "email": "info@boothdrop.co.uk",
-    "priceRange": "££",
-    "areaServed": [
-      "Luton", "Dunstable", "Milton Keynes", "Watford", "Hemel Hempstead",
-      "St Albans", "Bedford", "Stevenage", "London"
-    ],
-    "sameAs": [
-      "https://www.facebook.com/boothdrop",
-      "https://www.instagram.com/boothdrop"
-    ]
-  }
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Booth Drop","description":"Premium photo booth hire for weddings, parties and corporate events","url":"https://boothdrop.co.uk","telephone":"+44 7931-983-588","areaServed":["Luton","London","Milton Keynes","Watford","Bedford"]}
   </script>
 </head>
 <body>
 
 <!-- Announcement Bar -->
-<div class="announcement-bar">
-  🎉 Book now from just <strong>£299</strong> — Unlimited prints included with every hire! &nbsp;<a href="booking.html">Check Availability →</a>
+<div class="announce-bar">
+  🎉 <strong>Limited Availability</strong> — Book now from just <strong>£299</strong> & get FREE custom branding! &nbsp;<a href="booking.html">Check Dates →</a>
 </div>
 
 <!-- Navigation -->
-<nav class="navbar">
-  <div class="navbar-container">
-    <a href="index.html" class="navbar-brand" style="display: flex; align-items: center; gap: 5px;">
-      <img src="images/logo.png" alt="Booth Drop Logo" style="height: 70px; object-fit: contain; margin-left: -15px;">
-      <span>Booth<span>Drop</span></span>
+<nav class="nav" id="mainNav">
+  <div class="nav-inner container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Booth Drop">
+      <span>Booth<b>Drop</b></span>
     </a>
-    <ul class="navbar-menu">
-      <li><a href="#home">Home</a></li>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="booking.html" class="btn btn-primary btn-sm">Book Now</a></li>
     </ul>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="nav-actions">
+      <a href="tel:+447931983588" class="nav-phone">📞 +44 7931-983-588</a>
+      <button class="btn btn-primary" id="quoteBtn">Get Free Quote</button>
     </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<!-- Sticky Booking Button -->
-<div class="sticky-booking">
-  <button class="btn btn-primary" data-scroll-to="#booking-cta">
-    📅 Book Now
-  </button>
-</div>
-
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-badges">
+      <span class="hero-badge">⭐ 4.5 Star Rated</span>
+      <span class="hero-badge">🎉 1,000+ Events</span>
+      <span class="hero-badge">✅ Fully Insured</span>
+      <span class="hero-badge">🖨️ Unlimited Prints</span>
+    </div>
+    <h1 class="hero-title">The UK's Most Loved<br><span class="gradient-text">Photo Booth Hire</span></h1>
+    <p class="hero-sub">Weddings · Parties · Corporate Events — Unlimited prints, trained attendant &amp; full setup from just <strong>£299</strong>. Serving Luton &amp; across the UK.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-primary btn-lg" id="heroQuoteBtn">🚀 Get Free Quote</button>
+      <a href="gallery.html" class="btn btn-outline btn-lg">View Our Work →</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-section">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <span class="stat-number" data-target="1000">0</span><span class="stat-suffix">+</span>
+      <span class="stat-label">Events Completed</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="45" data-decimal>0</span>
+      <span class="stat-label">Average Rating ⭐</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="5000">0</span><span class="stat-suffix">+</span>
+      <span class="stat-label">Photos Taken</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section why-section">
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">⭐ 4.9 Rating &nbsp;|&nbsp; 500+ Events &nbsp;|&nbsp; Luton & 60 Miles</div>
-      <h1>Photo Booth Hire for Weddings, Parties & Corporate Events</h1>
-      <p>From just <strong>£299</strong> — Unlimited prints, trained attendant & full setup included. Serving Luton and across the UK.</p>
-      <div>
-        <a href="booking.html" class="btn btn-primary btn-lg">Check Availability</a>
-        <a href="#whats-included" class="btn btn-outline btn-lg">What's Included</a>
+    <div class="section-header">
+      <span class="section-tag">Why Us</span>
+      <h2>Why Families &amp; Businesses Choose Booth Drop</h2>
+      <p class="section-desc">We don't just hire photo booths — we create unforgettable memories at every single event.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🖨️</div>
+        <h3>Unlimited Prints</h3>
+        <p>No limits, no extra charges. Everyone gets as many prints as they like — included in every package.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🎭</div>
+        <h3>Premium Props</h3>
+        <p>A huge bucket of fun hats, glasses, signs &amp; accessories. We also offer custom backdrop options.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">📲</div>
+        <h3>Instant Digital Sharing</h3>
+        <p>Guests share photos to their phone instantly via QR code or text. No app, no waiting.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🛡️</div>
+        <h3>Fully Insured &amp; Professional</h3>
+        <p>Covered by full public liability insurance. Our trained attendants handle everything on the day.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Trust Stats -->
-<section>
+<!-- Our Booths -->
+<section class="section booths-section">
   <div class="container">
-    <div class="trust-section">
-      <div class="trust-item">
-        <div class="trust-item-icon">🎉</div>
-        <div class="trust-item-number">1,000+</div>
-        <div class="trust-item-label">Events Completed</div>
+    <div class="section-header">
+      <span class="section-tag">Our Range</span>
+      <h2>Choose Your Perfect Photo Booth</h2>
+      <p class="section-desc">Every booth includes unlimited prints, a dedicated attendant, props &amp; full setup.</p>
+    </div>
+    <div class="booths-grid">
+      <div class="booth-card reveal">
+        <div class="booth-img-wrap">
+          <img src="images/booth-lcd-pod.jpg" alt="LCD Pod Photo Booth Hire">
+          <span class="booth-tag">From £299</span>
+        </div>
+        <div class="booth-card-body">
+          <h3>LCD Pod</h3>
+          <p>Sleek, modern pod with RGB LED ring light &amp; iPad camera. Perfect for any event.</p>
+          <a href="booking.html" class="btn-link">Book This Booth →</a>
+        </div>
       </div>
-      <div class="trust-item">
-        <div class="trust-item-icon">⭐</div>
-        <div class="trust-item-number">4.5</div>
-        <div class="trust-item-label">Average Rating</div>
+      <div class="booth-card reveal">
+        <div class="booth-img-wrap">
+          <img src="images/booth-party.jpg" alt="Party Booth Hire">
+          <span class="booth-tag popular">⭐ Most Popular</span>
+        </div>
+        <div class="booth-card-body">
+          <h3>Party Booth</h3>
+          <p>Classic walk-in curtain booth. Brilliant for big groups &amp; fun-filled parties.</p>
+          <a href="booking.html" class="btn-link">Book This Booth →</a>
+        </div>
       </div>
-      <div class="trust-item">
-        <div class="trust-item-icon">📸</div>
-        <div class="trust-item-number">5K+</div>
-        <div class="trust-item-label">Photos Taken</div>
+      <div class="booth-card reveal">
+        <div class="booth-img-wrap">
+          <img src="images/booth-selfie-mirror.png" alt="Selfie Mirror Pod Hire">
+          <span class="booth-tag">From £349</span>
+        </div>
+        <div class="booth-card-body">
+          <h3>Selfie Mirror Pod</h3>
+          <p>Oval mirror pod with colour-changing LED strip &amp; built-in instant printer.</p>
+          <a href="booking.html" class="btn-link">Book This Booth →</a>
+        </div>
       </div>
-      <div class="trust-item">
-        <div class="trust-item-icon">🏆</div>
-        <div class="trust-item-number">10+</div>
-        <div class="trust-item-label">Years Experience</div>
+      <div class="booth-card reveal">
+        <div class="booth-img-wrap">
+          <img src="images/booth-retro-pod.png" alt="Retro Pod Photo Booth">
+          <span class="booth-tag">From £369</span>
+        </div>
+        <div class="booth-card-body">
+          <h3>Retro Pod</h3>
+          <p>Studio-style camera on tripod with umbrella lighting &amp; instant prints.</p>
+          <a href="booking.html" class="btn-link">Book This Booth →</a>
+        </div>
       </div>
+      <div class="booth-card reveal">
+        <div class="booth-img-wrap">
+          <img src="images/booth-magic-mirror.jpg" alt="Magic Mirror Photo Booth Hire">
+          <span class="booth-tag premium">✨ Premium</span>
+        </div>
+        <div class="booth-card-body">
+          <h3>Magic Mirror</h3>
+          <p>Full-length interactive mirror with RGB border, animations &amp; voice guidance.</p>
+          <a href="booking.html" class="btn-link">Book This Booth →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="booking.html" class="btn btn-outline-dark">View All Booths &amp; Pricing →</a>
     </div>
   </div>
 </section>
 
 <!-- What's Included -->
-<section id="whats-included">
+<section class="section included-section">
   <div class="container">
-    <h2>What's Included With Every Hire</h2>
-    <p class="section-intro">No hidden extras — everything you need for an unforgettable event is included in the price.</p>
-    <div class="features-grid">
-      <div class="feature-item">
-        <div class="feature-icon">🖨️</div>
-        <div class="feature-text">
-          <h4>Totally Unlimited Prints</h4>
-          <p>As many as you like for the full duration of your hire</p>
+    <div class="section-header">
+      <span class="section-tag">Included Free</span>
+      <h2>Everything's Included — No Hidden Extras</h2>
+      <p class="section-desc">Every Booth Drop hire comes with all of these as standard. No surprises on the day.</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-item reveal">
+        <span class="included-icon">🖨️</span>
+        <div><h4>Unlimited Prints</h4><p>As many as your guests like for the full hire duration</p></div>
+      </div>
+      <div class="included-item reveal">
+        <span class="included-icon">🎩</span>
+        <div><h4>Premium Props</h4><p>Fun hats, glasses, signs &amp; accessories for everyone</p></div>
+      </div>
+      <div class="included-item reveal">
+        <span class="included-icon">👤</span>
+        <div><h4>Trained Attendant</h4><p>A friendly professional runs the booth all night long</p></div>
+      </div>
+      <div class="included-item reveal">
+        <span class="included-icon">📱</span>
+        <div><h4>Digital Album</h4><p>All photos delivered digitally after your event</p></div>
+      </div>
+      <div class="included-item reveal">
+        <span class="included-icon">🎨</span>
+        <div><h4>Custom Branding</h4><p>Your name, logo or message on every single print</p></div>
+      </div>
+      <div class="included-item reveal">
+        <span class="included-icon">🚚</span>
+        <div><h4>Delivery &amp; Setup</h4><p>We arrive early, set up fully &amp; pack down after</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Reviews</span>
+      <h2>What Our Clients Say</h2>
+      <p class="section-desc">Over 1,000 happy clients — here's what some of them had to say.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Absolutely incredible! The Magic Mirror was the highlight of our wedding. Every single guest loved it. The attendant was so professional and friendly."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div><strong>Sarah M.</strong><span>Wedding — London</span></div>
         </div>
       </div>
-      <div class="feature-item">
-        <div class="feature-icon">👤</div>
-        <div class="feature-text">
-          <h4>Trained Attendant</h4>
-          <p>A friendly professional to run the booth all night long</p>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Used Booth Drop for our company Christmas party — massive hit! The LCD Pod was perfect, photos came out brilliant and the team were amazing."</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div><strong>James K.</strong><span>Corporate Event — Luton</span></div>
         </div>
       </div>
-      <div class="feature-item">
-        <div class="feature-icon">🎭</div>
-        <div class="feature-text">
-          <h4>Fun Props Bucket</h4>
-          <p>A bucket full of silly hats, glasses, signs & accessories</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">📱</div>
-        <div class="feature-text">
-          <h4>Digital Album</h4>
-          <p>All photos sent to you digitally — share with every guest</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🎨</div>
-        <div class="feature-text">
-          <h4>Custom Branded Templates</h4>
-          <p>Free personalised photo borders with your name & date</p>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🚚</div>
-        <div class="feature-text">
-          <h4>Full Delivery & Setup</h4>
-          <p>We handle everything — you just enjoy the party</p>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The Party Booth was brilliant for my daughter's 18th. Quick setup, hilarious props and brilliant print quality. Would 100% recommend Booth Drop!"</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div><strong>Amanda T.</strong><span>Birthday Party — Milton Keynes</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
-<section id="services">
-  <div class="container">
-    <h2>Our Premium Services</h2>
-    <p class="section-intro">Perfect for every occasion — from intimate parties to grand corporate events</p>
-    <div class="services-grid">
-      <div class="card">
-        <div class="card-icon">💍</div>
-        <h3>Wedding Photo Booths</h3>
-        <p>Make your wedding day magical with our premium photo booth. We've helped create memories at hundreds of weddings — your guests will love it.</p>
-        <a href="services.html#weddings" class="btn btn-primary btn-sm">Learn More</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🎊</div>
-        <h3>Corporate Events</h3>
-        <p>Branded photo booth experiences with data capture, social sharing & custom wrapping. Perfect for conferences, team building & product launches.</p>
-        <a href="services.html#corporate" class="btn btn-primary btn-sm">Learn More</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🎈</div>
-        <h3>Party Packages</h3>
-        <p>Birthdays, anniversaries, proms, Eid celebrations, christenings & more. We bring the fun — you take the memories home.</p>
-        <a href="services.html#parties" class="btn btn-primary btn-sm">Learn More</a>
-      </div>
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>Ready to Make Your Event Unforgettable?</h2>
+      <p>Get a free, no-obligation quote in 60 seconds. We respond within 2 hours.</p>
     </div>
-  </div>
-</section>
-
-<!-- Booth Types -->
-<section>
-  <div class="container">
-    <h2>Our Booth Range</h2>
-    <p class="section-intro">Choose from 5 stunning booths — each includes unlimited prints, attendant & full setup</p>
-    <div class="booth-types-grid booth-types-grid--5">
-      <div class="booth-type-card">
-        <img src="images/booth-lcd-pod.jpg" alt="LCD Pod" class="booth-type-image">
-        <div class="booth-type-info">
-          <h3>LCD Pod</h3>
-          <p>Sleek, modern pod with RGB LED ring light &amp; iPad camera. Great for parties &amp; weddings.</p>
-          <span class="booth-type-price">From £299 / 3hrs</span>
-        </div>
-      </div>
-      <div class="booth-type-card">
-        <img src="images/booth-party.jpg" alt="Party Booth" class="booth-type-image">
-        <div class="booth-type-info">
-          <h3>Party Booth</h3>
-          <p>Classic walk-in curtain booth. Perfect for groups &amp; fun-filled parties of all kinds.</p>
-          <span class="booth-type-price">From £329 / 3hrs</span>
-        </div>
-      </div>
-      <div class="booth-type-card">
-        <img src="images/booth-selfie-mirror.png" alt="Selfie Mirror Pod" class="booth-type-image">
-        <div class="booth-type-info">
-          <h3>Selfie Mirror Pod</h3>
-          <p>Sleek oval mirror pod with colour-changing LED strip &amp; built-in printer.</p>
-          <span class="booth-type-price">From £349 / 3hrs</span>
-        </div>
-      </div>
-      <div class="booth-type-card">
-        <img src="images/booth-retro-pod.png" alt="Retro Pod" class="booth-type-image">
-        <div class="booth-type-info">
-          <h3>Retro Pod</h3>
-          <p>Studio-style camera booth on a tripod with professional umbrella lighting &amp; instant prints.</p>
-          <span class="booth-type-price">From £369 / 3hrs</span>
-        </div>
-      </div>
-      <div class="booth-type-card">
-        <img src="images/booth-magic-mirror.jpg" alt="Magic Mirror" class="booth-type-image">
-        <div class="booth-type-info">
-          <h3>Magic Mirror</h3>
-          <p>Full-length interactive mirror with RGB border, animations &amp; voice guidance. The wow factor!</p>
-          <span class="booth-type-price">From £399 / 3hrs</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing Section -->
-<section id="pricing">
-  <div class="container">
-    <h2>Simple, Transparent Pricing</h2>
-    <p class="section-intro">All packages include unlimited prints, attendant, props, digital album & full setup</p>
-    <div class="pricing-cards">
-      <div class="pricing-card">
-        <div class="pricing-card-icon">📸</div>
-        <h3>Selfie Pod</h3>
-        <div class="price">£299<span class="price-range"> / 3hrs</span></div>
-        <ul>
-          <li>Selfie Pod Booth</li>
-          <li>Unlimited Prints</li>
-          <li>Trained Attendant</li>
-          <li>Fun Props Included</li>
-          <li>Digital Album</li>
-          <li>Custom Print Template</li>
-        </ul>
-        <a href="booking.html" class="btn btn-primary btn-block">Book This Package</a>
-      </div>
-      <div class="pricing-card featured">
-        <div class="pricing-badge">⭐ Most Popular</div>
-        <div class="pricing-card-icon">🎭</div>
-        <h3>Party Booth</h3>
-        <div class="price">£349<span class="price-range"> / 3hrs</span></div>
-        <ul>
-          <li>Premium Booth Setup</li>
-          <li>Unlimited Prints</li>
-          <li>Trained Attendant</li>
-          <li>Deluxe Props Bucket</li>
-          <li>Digital Album</li>
-          <li>Custom Backdrop</li>
-        </ul>
-        <a href="booking.html" class="btn btn-primary btn-block">Book This Package</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-card-icon">🏢</div>
-        <h3>Premium Package</h3>
-        <div class="price">£449<span class="price-range"> / 3hrs</span></div>
-        <ul>
-          <li>Inflatable or Magic Mirror</li>
-          <li>Unlimited Prints</li>
-          <li>Trained Attendant</li>
-          <li>Full Branding Options</li>
-          <li>Digital Album + Sharing</li>
-          <li>Custom Backdrop & Layout</li>
-        </ul>
-        <a href="booking.html" class="btn btn-primary btn-block">Book This Package</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery Preview -->
-<section>
-  <div class="container">
-    <h2>From Our Recent Events</h2>
-    <p class="section-intro">Real photos from real events — see the magic we create</p>
-    <div class="gallery-preview-grid">
-      <div class="gallery-preview-item">
-        <img src="images/gallery-13.jpg" alt="Wedding Event">
-        <div class="gallery-overlay">
-          <div class="gallery-overlay-text">Wedding Event</div>
-        </div>
-      </div>
-      <div class="gallery-preview-item">
-        <img src="images/gallery-14.jpg" alt="Birthday Party">
-        <div class="gallery-overlay">
-          <div class="gallery-overlay-text">Birthday Party</div>
-        </div>
-      </div>
-      <div class="gallery-preview-item">
-        <img src="images/gallery-16.jpg" alt="Private Event">
-        <div class="gallery-overlay">
-          <div class="gallery-overlay-text">Private Event</div>
-        </div>
-      </div>
-      <div class="gallery-preview-item">
-        <img src="images/gallery-15.jpg" alt="Corporate Gala">
-        <div class="gallery-overlay">
-          <div class="gallery-overlay-text">Corporate Gala</div>
-        </div>
-      </div>
-      <div class="gallery-preview-item">
-        <img src="images/gallery-17.jpg" alt="Studio Setup">
-        <div class="gallery-overlay">
-          <div class="gallery-overlay-text">Studio Setup</div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="gallery.html" class="btn btn-secondary">View Full Gallery →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials">
-  <div class="container">
-    <h2>What Our Clients Say</h2>
-    <div class="row">
-      <div class="testimonial-card">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text">"Booth Drop made our wedding absolutely magical! The team was professional, the photos were stunning, and our guests loved every minute. Highly recommended!"</p>
-        <p class="testimonial-author">Sarah & James Thompson</p>
-        <p class="testimonial-title">Wedding, St Albans</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text">"Outstanding service for our corporate event. Branded photos, data capture, the works. The booth was the highlight of the day — great value too!"</p>
-        <p class="testimonial-author">Michael Chen</p>
-        <p class="testimonial-title">Corporate Event, Milton Keynes</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text">"My daughter's 18th birthday party was unforgettable! The attendant was so friendly, the props were hilarious, and the queue for the booth never stopped!"</p>
-        <p class="testimonial-author">Emma Wilson</p>
-        <p class="testimonial-title">Birthday Party, Watford</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Call to Action -->
-<section class="cta-section" id="booking-cta">
-  <div class="container">
-    <h2>Ready to Make Your Event Unforgettable?</h2>
-    <p>Join 500+ happy customers — check availability and book online in minutes</p>
-    <a href="booking.html" class="btn btn-primary btn-lg" style="background: white; color: #e91e63;">Check Availability Now</a>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section>
-  <div class="container">
-    <h2>Frequently Asked Questions</h2>
-    <div style="max-width: 700px; margin: 0 auto;">
-      <div class="faq-item active">
-        <div class="faq-question">How much does photo booth hire cost?</div>
-        <div class="faq-answer">
-          <p>Our packages start from just £299 for 3 hours. Wedding packages from £349, corporate events from £449. All prices include unlimited prints, attendant, props, digital album & setup. Contact us for a custom quote!</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">What's included in every package?</div>
-        <div class="faq-answer">
-          <p>Every single hire includes: totally unlimited prints, a trained friendly attendant, a fun props bucket, a digital album of all photos, custom branded print templates, and full delivery & setup. No hidden extras.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">How far do you travel?</div>
-        <div class="faq-answer">
-          <p>We're based in Luton and cover up to 60 miles — including Milton Keynes, Watford, Hemel Hempstead, St Albans, Bedford, Stevenage, Birmingham and London. Get in touch if you're outside this area.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Can you brand the booth for corporate events?</div>
-        <div class="faq-answer">
-          <p>Absolutely! Our corporate package includes custom booth branding (exterior wrap), branded touchscreen interface, logo on every print-out, and even data capture & social media sharing features.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">How do I book?</div>
-        <div class="faq-answer">
-          <p>Simply visit our <a href="booking.html">booking page</a>, fill in your event details, and we'll confirm availability within 24 hours. Or call us directly at <a href="tel:+441582365252">+44 (0) 1582 365252</a>.</p>
-        </div>
-      </div>
+    <div class="cta-actions">
+      <button class="btn btn-white btn-lg" id="ctaQuoteBtn">🚀 Get Free Quote</button>
+      <a href="tel:+447931983588" class="btn btn-outline-white btn-lg">📞 Call Us Now</a>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Booth Drop</h4>
-        <p>Professional photo booth hire for unforgettable events. Based in Luton, serving the UK from £299.</p>
-        <div class="social-links">
-          <a href="https://facebook.com/boothdrop" target="_blank" aria-label="Facebook">f</a>
-          <a href="https://instagram.com/boothdrop" target="_blank" aria-label="Instagram">📷</a>
-          <a href="https://twitter.com/boothdrop" target="_blank" aria-label="Twitter">𝕏</a>
-          <a href="https://tiktok.com/@boothdrop" target="_blank" aria-label="TikTok">♪</a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html#weddings">Wedding Photo Booths</a></li>
-          <li><a href="services.html#corporate">Corporate Events</a></li>
-          <li><a href="services.html#parties">Party Packages</a></li>
-          <li><a href="services.html#features">Premium Features</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Locations</h4>
-        <ul>
-          <li><a href="locations/luton.html">Luton</a></li>
-          <li><a href="locations/milton-keynes.html">Milton Keynes</a></li>
-          <li><a href="locations/london.html">London</a></li>
-          <li><a href="locations/watford.html">Watford</a></li>
-          <li><a href="locations/all.html">All Locations</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <ul>
-          <li>📞 <a href="tel:+441582365252">+44 (0) 1582 365252</a></li>
-          <li>📧 <a href="mailto:info@boothdrop.co.uk">info@boothdrop.co.uk</a></li>
-          <li><a href="contact.html">Contact Form</a></li>
-          <li><a href="booking.html">Book Online</a></li>
-        </ul>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Booth<span>Drop</span></span>
+      <p>Premium photo booth hire for weddings, parties &amp; corporate events. Based in Luton, serving the whole UK.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/boothdrop" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/boothdrop" target="_blank" aria-label="Instagram">📷</a>
+        <a href="https://tiktok.com/@boothdrop" target="_blank" aria-label="TikTok">♪</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Booth Drop. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Our Booths</h4>
+      <ul>
+        <li><a href="booking.html">LCD Pod</a></li>
+        <li><a href="booking.html">Party Booth</a></li>
+        <li><a href="booking.html">Selfie Mirror Pod</a></li>
+        <li><a href="booking.html">Retro Pod</a></li>
+        <li><a href="booking.html">Magic Mirror</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li>📞 <a href="tel:+447931983588">+44 7931-983-588</a></li>
+        <li>📧 <a href="mailto:info@boothdrop.co.uk">info@boothdrop.co.uk</a></li>
+        <li>📍 Luton, Bedfordshire, UK</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2024 Booth Drop. All rights reserved. | Serving Luton, London, Milton Keynes &amp; across the UK.</p>
     </div>
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/447931983588" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
+<!-- Quote Modal -->
+<div class="modal-overlay" id="quoteModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-header">
+      <h2>Get Your Free Quote</h2>
+      <p>Fill in your details and we'll get back to you within 2 hours!</p>
+    </div>
+    <form class="quote-form" id="quoteForm">
+      <div class="quote-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" placeholder="John Smith" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="+44 7931-983-588" required>
+        </div>
+      </div>
+      <div class="quote-row">
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Event Date *</label>
+          <input type="date" required>
+        </div>
+      </div>
+      <div class="quote-row">
+        <div class="form-group">
+          <label>Type of Event</label>
+          <select>
+            <option value="">Select event type</option>
+            <option>Wedding</option>
+            <option>Birthday Party</option>
+            <option>Corporate Event</option>
+            <option>Engagement Party</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Choice of Booth</label>
+          <select>
+            <option value="">Select a booth</option>
+            <option>LCD Pod (From £299)</option>
+            <option>Party Booth (From £329)</option>
+            <option>Selfie Mirror Pod (From £349)</option>
+            <option>Retro Pod (From £369)</option>
+            <option>Magic Mirror (From £399)</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%;margin-top:8px;">🚀 Send My Free Quote Request</button>
+      <p style="text-align:center;font-size:0.8rem;color:#6b7280;margin-top:8px;">✓ We respond within 2 hours · No obligation</p>
+    </form>
+  </div>
+</div>
+
+<script>
+// Mobile Nav
+const burger = document.getElementById('navBurger');
+const menu = document.getElementById('navMenu');
+burger.addEventListener('click', () => { menu.classList.toggle('open'); burger.classList.toggle('open'); });
+
+// Sticky Nav
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Modal
+const modal = document.getElementById('quoteModal');
+function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
+['quoteBtn','heroQuoteBtn','ctaQuoteBtn'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', openModal);
+});
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Form Submit
+document.getElementById('quoteForm').addEventListener('submit', e => {
+  e.preventDefault();
+  closeModal();
+  const toast = document.createElement('div');
+  toast.textContent = '✅ Thanks! We\'ll get back to you within 2 hours.';
+  toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#22c55e;color:#fff;padding:16px 28px;border-radius:50px;font-weight:600;z-index:9999;box-shadow:0 8px 30px rgba(0,0,0,0.15);font-family:Poppins,sans-serif;';
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 5000);
+});
+
+// Animated Counters
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-target'));
+  const isDecimal = el.hasAttribute('data-decimal');
+  const dur = 2200, steps = dur / 16;
+  const inc = target / steps;
+  let cur = 0;
+  const run = () => {
+    cur = Math.min(cur + inc, target);
+    el.textContent = isDecimal ? (cur / 10).toFixed(1) : Math.floor(cur).toLocaleString();
+    if (cur < target) requestAnimationFrame(run);
+  };
+  run();
+}
+
+// Intersection Observer — reveal + counters
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    io.unobserve(entry.target);
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Counter trigger
+document.querySelectorAll('.stat-number').forEach(el => {
+  const cio = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { animateCounter(el); cio.disconnect(); }
+  }, { threshold: 0.5 });
+  cio.observe(el);
+});
+</script>
 </body>
 </html>
