@@ -2,83 +2,83 @@
    BOOTHDROP ENTERTAINMENT — script.js
    ======================================== */
 
-/* ── Booth Modal Data ── */
+/* ── Booth Modal Data (from boothdrop.co.uk) ── */
 const boothData = {
   slimpod: {
     name: 'LCD SlimPod',
     tag: 'Most Popular',
-    desc: 'The LCD SlimPod is our sleek, modern touchscreen photo booth with a slim, elegant footprint that fits perfectly into any event space. Featuring a high-definition touchscreen, professional DSLR camera, and studio-quality lighting, the SlimPod delivers stunning photos every single time. Its contemporary design makes it a favourite for weddings, parties, and corporate events alike.',
+    desc: 'Make your event unforgettable with our LCD SlimPod iPad Photo Booth! For an affordable price, you\'ll get 2 high-quality prints per session, plus instant digital sharing to keep the memories going long after the event. Our packages include unlimited sessions, stick props for added fun, and a guest book where you and your guests can leave personalised messages alongside their photos. We also provide email sharing so guests can send their photos directly to their inboxes, and free delivery and setup, so you don\'t have to worry about a thing. Smart background removal also included so you do not have to worry about your venue background.',
     includes: [
-      'Unlimited Instant Prints', 'Professional DSLR Camera', 'HD Touchscreen Interface',
-      'Studio-Quality Lighting', 'Custom Photo Template', 'Fun Props Box',
-      'Professional Attendant', 'Digital Copies via Email', 'Online Gallery',
-      'Guestbook & Pens', 'Free Delivery & Setup', 'Fully Insured'
+      '2 Prints Per Session', 'Unlimited Sessions', 'Guest Book & Glue Sticks',
+      'Stick Props', 'Free Delivery & Setup', 'Email Sharing',
+      'Smart Background Removal', 'Customisable Text & Logo', 'Virtual Props & Filters',
+      'Touch Screen Interface', 'GIFs & Boomerangs', 'Digital Sharing'
     ]
   },
   selfie: {
     name: 'Selfie Mirror Pod',
     tag: 'Fan Favourite',
-    desc: 'The Selfie Mirror Pod is a full-length interactive mirror that doubles as a state-of-the-art photo booth. Guests interact with a stunning, animated touchscreen mirror that captures beautiful full-length photos. With voice guidance, fun animations, emoji touch stamps, and a signature capture feature, this booth is an experience in itself — pure glamour meets cutting-edge technology.',
+    desc: 'Elevate your event with our Selfie Mirror Pod, featuring a sleek half mirror screen that creates an interactive, elegant experience for your guests. Equipped with a professional DSLR camera, this booth delivers high-quality photos every time. Your guests will enjoy unlimited sessions and instant prints, ensuring they take home a beautiful keepsake from your special event. Each package includes a guest book, so your guests can leave personal messages alongside their photos, adding an extra touch of sentiment to the memories they create. Whether it\'s a wedding, corporate event, or any celebration, our Selfie Mirror Pod will provide fun, luxury, and lasting memories.',
     includes: [
-      'Full-Length Mirror Display', 'Interactive Touchscreen', 'Voice Guidance System',
-      'Emoji Touch Stamps', 'Signature Capture', 'Fun Props Box',
-      'Instant Photo Printing', 'Custom Overlay Design', 'Professional Attendant',
-      'Digital Copies', 'Guestbook', 'Fully Insured'
+      'Guest Book & Glue Sticks', 'Prints for Each Guest', 'Unlimited Sessions',
+      'Booth Attendant', 'USB for Digital Copies', 'Email Sharing',
+      'Personalised Templates & Logos', 'GIFs & Filters', 'Social Media Sharing',
+      'Huge Selection of Props', 'Professional DSLR Camera', 'Instant Prints'
     ]
   },
   retro: {
     name: 'Retro Pod',
     tag: 'Classic Charm',
-    desc: 'The Retro Pod brings timeless charm to any celebration. Styled after classic vintage photo booths, it delivers the iconic strip print experience guests know and love — with a modern twist. Step inside the private enclosure, strike a pose, and walk away with a beautiful strip of memories. Perfect for those who want a fun, nostalgic centrepiece at their event.',
+    desc: 'Streamline your event with our Retro Pod, featuring an inbuilt printer for instant, high-quality prints with no need for bulky external setups. This innovative design reduces visible cables, keeping your venue clean and clutter-free while still offering unlimited sessions and instant prints for each guest. Running on a standard DSLR camera, you can expect crisp, professional photos that your guests will love. Every session also comes with a guest book where guests can leave messages and photos for a personal touch. Perfect for weddings, parties and corporate events.',
     includes: [
-      'Classic Strip Prints', 'Private Enclosed Booth', 'Vintage-Style Design',
-      'High-Quality Camera', 'Instant Print Delivery', 'Custom Strip Template',
-      'Fun Props Box', 'Professional Attendant', 'Digital Copies',
-      'Online Gallery', 'Free Delivery & Setup', 'Fully Insured'
+      'Guest Book & Glue Sticks', 'Prints for Each Guest', 'Unlimited Sessions',
+      'Booth Attendant', 'USB for Digital Copies', 'Email Sharing',
+      'Personalised Templates & Logos', 'GIFs & Filters', 'Social Media Sharing',
+      'Huge Selection of Props', 'Inbuilt Printer', 'Minimal Cables Setup'
     ]
   },
   magic: {
     name: 'Magic Mirror',
     tag: 'Wedding Favourite',
-    desc: 'The Magic Mirror is the ultimate entertainment piece for weddings and top-tier events. This stunning full-length mirror transforms into an interactive photo booth with twinkling LED lights, fun on-screen animations, and a built-in printer. Guests simply touch the mirror to start and walk away with beautiful, personalised prints. It truly is magic — an absolute showstopper at any event.',
+    desc: 'Step into the future of photo booths with our Big Magic Mirror Photo Booth! Featuring a stunning full-length mirror display, this booth is perfect for capturing your guests in their best light. Powered by a professional DSLR camera, it guarantees high-quality photos for every shot. Your guests can enjoy unlimited sessions and receive instant prints to take home as a keepsake. Plus, our booth includes a guest book, so every photo becomes a personal memento with fun messages from your guests. Whether it\'s a wedding, birthday party, or corporate event, our Magic Mirror adds a touch of glamour and fun to any occasion.',
     includes: [
-      'Full-Length Magic Mirror', 'LED Twinkling Frame', 'Animated Screen Effects',
-      'Touch-to-Start Interface', 'Instant Photo Printing', 'Custom Print Design',
-      'Fun Props Box', 'Emoji & GIF Options', 'Professional Attendant',
-      'Digital Sharing', 'Guestbook', 'Fully Insured'
+      'Guest Book & Glue Sticks', 'Prints for Each Guest', 'Unlimited Sessions',
+      'Booth Attendant', 'USB for Digital Copies', 'Email Sharing',
+      'Personalised Templates & Logos', 'GIFs & Filters', 'Social Media Sharing',
+      'Huge Selection of Props', 'Full-Length Mirror Display', 'Professional DSLR Camera'
     ]
   },
   party: {
     name: 'Party Booth',
-    tag: 'High Energy',
-    desc: 'The Party Booth is our open-air, high-energy photo station — designed for maximum fun and non-stop action. Perfect for large groups, it features wide-angle photography so everyone can pile in. With a customisable backdrop, rapid printing, and the option for GIFs and boomerangs, the Party Booth keeps the energy high all night long. This is the ultimate party starter.',
+    tag: 'Up to 8 People',
+    desc: 'Give your guests the ultimate photo experience with our Enclosed Party Booth! Perfect for those who want a little more privacy, this booth offers a cosy, intimate space where up to 8 people can join in for a fun photo session. Whether it\'s a group of friends or a family, everyone can fit comfortably while enjoying the privacy to let loose and capture memorable moments. With its sleek, modern design, our Enclosed Party Booth ensures a seamless experience, and each session comes with instant prints for guests to take home. Whether it\'s a wedding, party, or corporate event, our booth adds an extra layer of fun and keeps the memories private and personal.',
     includes: [
-      'Open-Air Wide-Angle Setup', 'Rapid Instant Printing', 'GIF & Boomerang Mode',
-      'Custom Backdrop Options', 'Large Group Capacity', 'Fun Props Box',
-      'Custom Photo Template', 'Professional Attendant', 'Digital Copies',
-      'Social Media Sharing', 'Unlimited Photos', 'Fully Insured'
+      'Guest Book & Glue Sticks', '2 Prints Per Session', 'Unlimited Sessions',
+      'Set Up & Pack Down', 'Email Sharing', 'Personalised Templates & Logos',
+      'GIFs & Filters', 'Social Media Sharing', 'Stick Props',
+      'Private Enclosed Space', 'Up to 8 People', 'Sleek Modern Design'
     ]
   },
   inflatable: {
     name: 'Inflatable Booth',
-    tag: 'Unique Showstopper',
-    desc: 'The Inflatable Booth is a truly one-of-a-kind experience that turns heads and creates instant excitement. This eye-catching inflatable enclosure creates a private, immersive photo environment unlike anything else. Guests step inside for a unique, intimate photo experience while the impressive exterior makes for incredible event photos. Be different. Be unforgettable. Hire the Inflatable Booth.',
+    tag: 'Up to 10 People',
+    desc: 'Add a unique and exciting touch to your event with our Inflatable Photo Booth! This spacious booth offers privacy for your guests while allowing up to 10 people to capture fun, unforgettable moments together. Perfect for large groups, it provides the perfect setting for everyone to let loose and have a great time. What makes this booth even more special is that your clients can choose the colour of the inflatable to match the theme of their event, creating a personalised, vibrant experience. Whether it\'s a wedding, birthday party, or corporate gathering, our Inflatable Photo Booth is sure to be a hit!',
     includes: [
-      'Unique Inflatable Enclosure', 'Private Photo Environment', 'High-Quality Camera',
-      'Instant Photo Printing', 'Custom Photo Template', 'Fun Props Box',
-      'Professional Attendant', 'Digital Copies', 'Online Gallery',
-      'Social Media Sharing', 'Free Delivery & Setup', 'Fully Insured'
+      'Guest Book & Glue Sticks', 'Prints for Each Guest', 'Unlimited Sessions',
+      'Booth Attendant', 'USB for Digital Copies', 'Email Sharing',
+      'Personalised Templates & Logos', 'GIFs & Filters', 'Social Media Sharing',
+      'Huge Selection of Props', 'Up to 10 People', 'Custom Colour Choice'
     ]
   },
   gif: {
     name: 'GIF Booth',
     tag: 'Social Media Ready',
-    desc: "The GIF Booth captures animated GIFs, boomerangs, and short video clips that are instantly shareable on Instagram, TikTok, Facebook, and beyond. Perfect for brand activations, corporate events, and anyone who wants to maximise their social media reach. Guests receive instant digital delivery to their phone — no waiting, no hassle, just viral-ready content straight from your event.",
+    desc: 'Perfect for weddings, parties, corporate events, and brand activations, our GIF Booth delivers high-quality photos, fun GIFs, boomerangs, and instant sharing via email. With a user-friendly touch screen, customisable text and logo, and a wide range of virtual props and filters, guests of all ages can strike a pose and create memories in seconds. No prints, no fuss — just digital magic that keeps the fun going long after the event ends. Smart background removal also included so you do not have to worry about your venue background.',
     includes: [
       'Animated GIF Creation', 'Boomerang Mode', 'Instant Digital Delivery',
       'Social Media Ready Files', 'Custom GIF Overlay', 'QR Code Sharing',
       'Email Delivery', 'Professional Attendant', 'Custom Backdrop',
-      'Props Box Available', 'Unlimited GIFs', 'Fully Insured'
+      'Virtual Props & Filters', 'Smart Background Removal', 'Unlimited GIFs'
     ]
   }
 };
@@ -271,3 +271,39 @@ function initFooterBoothLinks() {
     });
   });
 }
+
+/* ── Enquiry Form Submit ── */
+function submitEnquiry(e) {
+  e.preventDefault();
+  const btn = document.getElementById('enquirySubmitBtn');
+  const success = document.getElementById('formSuccess');
+  const form = document.getElementById('enquiryForm');
+
+  const name    = document.getElementById('enquiryName').value;
+  const email   = document.getElementById('enquiryEmail').value;
+  const phone   = document.getElementById('enquiryPhone').value;
+  const event   = document.getElementById('enquiryEvent').value;
+  const booth   = document.getElementById('enquiryBooth').value;
+  const date    = document.getElementById('enquiryDate').value;
+  const message = document.getElementById('enquiryMessage').value;
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  // Build WhatsApp message as fallback delivery
+  const waText = encodeURIComponent(
+    `New Enquiry from Website!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nEvent: ${event}\nBooth: ${booth}\nDate: ${date}\n\nMessage: ${message}`
+  );
+
+  // Show success & open WhatsApp after short delay
+  setTimeout(() => {
+    success.style.display = 'block';
+    form.reset();
+    btn.textContent = 'Send Enquiry ✉️';
+    btn.disabled = false;
+    // Deliver via WhatsApp
+    window.open(`https://wa.me/447368631516?text=${waText}`, '_blank');
+  }, 800);
+}
+
+window.submitEnquiry = submitEnquiry;

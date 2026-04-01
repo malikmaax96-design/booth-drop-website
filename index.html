@@ -16,8 +16,7 @@
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="logo">
-        <span class="logo-icon">📸</span>
-        <span class="logo-text">Boothdrop<span class="logo-accent"> Entertainment</span></span>
+        <img src="images/logo.png" alt="Boothdrop Entertainment" class="logo-img" />
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#about">About</a>
@@ -430,6 +429,117 @@
     </div>
   </section>
 
+  <!-- CONTACT / ENQUIRY -->
+  <section class="contact-section section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2 class="section-title">Send Us an Enquiry</h2>
+        <p class="section-desc">Not ready to book yet? Have a question? Fill in the form below and we'll get back to you as soon as possible.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <form class="enquiry-form" id="enquiryForm" onsubmit="submitEnquiry(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enquiryName">Your Name *</label>
+              <input type="text" id="enquiryName" name="name" placeholder="e.g. Sarah Johnson" required />
+            </div>
+            <div class="form-group">
+              <label for="enquiryEmail">Email Address *</label>
+              <input type="email" id="enquiryEmail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enquiryPhone">Phone Number</label>
+              <input type="tel" id="enquiryPhone" name="phone" placeholder="07xxx xxxxxx" />
+            </div>
+            <div class="form-group">
+              <label for="enquiryEvent">Event Type</label>
+              <select id="enquiryEvent" name="event_type">
+                <option value="">Select event type...</option>
+                <option>Wedding</option>
+                <option>Birthday Party</option>
+                <option>Corporate Event</option>
+                <option>Prom / School Event</option>
+                <option>Baby Shower</option>
+                <option>Anniversary</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enquiryBooth">Booth of Interest</label>
+              <select id="enquiryBooth" name="booth">
+                <option value="">Select a booth...</option>
+                <option>LCD SlimPod</option>
+                <option>Selfie Mirror Pod</option>
+                <option>Retro Pod</option>
+                <option>Magic Mirror</option>
+                <option>Party Booth</option>
+                <option>Inflatable Booth</option>
+                <option>GIF Booth</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="enquiryDate">Event Date</label>
+              <input type="date" id="enquiryDate" name="event_date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enquiryMessage">Your Message *</label>
+            <textarea id="enquiryMessage" name="message" rows="5" placeholder="Tell us about your event, venue, number of guests, any special requirements..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit-btn" id="enquirySubmitBtn">Send Enquiry ✉️</button>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <span>✅</span> Thank you! We'll be in touch within 24 hours.
+          </div>
+        </form>
+        <div class="contact-info-panel">
+          <h3>Other Ways to Reach Us</h3>
+          <div class="contact-info-item">
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Call Us</strong>
+              <a href="tel:07368631516">07368 631 516</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">💬</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/447368631516" target="_blank">Message us on WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info.boothdrop@boothdrop.co.uk">info.boothdrop@boothdrop.co.uk</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <strong>Coverage</strong>
+              <span>Serving London, Essex, Surrey, Hertfordshire &amp; beyond</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">🕐</span>
+            <div>
+              <strong>Response Time</strong>
+              <span>We aim to reply within 24 hours</span>
+            </div>
+          </div>
+          <a href="#booking" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Ready to Book? →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- BOOKING WIDGET -->
   <section class="booking section" id="booking">
     <div class="container">
@@ -466,8 +576,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo">
-            <span class="logo-icon">📸</span>
-            <span class="logo-text">Boothdrop<span class="logo-accent"> Entertainment</span></span>
+            <img src="images/logo.png" alt="Boothdrop Entertainment" class="logo-img" />
           </div>
           <p>Your premier photo booth experience across the UK. Turning celebrations into unforgettable moments since day one.</p>
           <div class="footer-social">
