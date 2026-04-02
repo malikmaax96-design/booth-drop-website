@@ -1036,113 +1036,164 @@ ul { list-style: none; }
 }
 
 /* ==============================
-   CONTACT / ENQUIRY FORM
+   CONTACT / ENQUIRY (cq-)
    ============================== */
 .contact-section { background: var(--dark-3); }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 3rem;
-  align-items: start;
+
+/* Booth radio picker */
+.cq-booth-picker { margin-bottom: 2.5rem; }
+.cq-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
 }
-.enquiry-form {
+.cq-booth-row {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+.cq-booth-option {
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 150px;
+}
+.cq-booth-option input[type="radio"] {
+  display: block;
+  margin: 0 auto 0.4rem;
+  accent-color: var(--gold);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.cq-booth-card {
+  border: 2px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+  background: var(--dark-4);
+}
+.cq-booth-option input:checked + .cq-booth-card {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+}
+.cq-booth-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.cq-booth-option:hover .cq-booth-card { border-color: var(--gold); }
+.cq-booth-option:hover .cq-booth-card img { transform: scale(1.05); }
+.cq-booth-card span {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--white);
+  padding: 0.5rem;
+  background: var(--dark-5);
+}
+
+/* Form */
+.cq-form {
   background: var(--dark-4);
   border: 1px solid rgba(201,168,76,0.15);
   border-radius: var(--radius);
   padding: 2.5rem;
 }
-.form-row {
+.cq-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
-.form-group {
+.cq-form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
-.form-group label {
+.cq-form-group.cq-full { grid-column: 1 / -1; }
+.cq-form-group label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  color: var(--light-2);
 }
-.form-group input,
-.form-group select,
-.form-group textarea {
+.cq-form-group input,
+.cq-form-group select,
+.cq-form-group textarea {
   background: var(--dark-5);
   border: 1px solid rgba(201,168,76,0.2);
-  border-radius: var(--radius-sm);
-  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
   color: var(--white);
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   transition: border-color 0.25s;
   width: 100%;
 }
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--text-muted); }
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.cq-form-group input:focus,
+.cq-form-group select:focus,
+.cq-form-group textarea:focus {
   outline: none;
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
 }
-.form-group select option { background: var(--dark-4); }
-.form-group textarea { resize: vertical; min-height: 120px; }
-.form-group:last-of-type { margin-bottom: 1.5rem; }
-.form-submit-btn {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: var(--radius);
-}
-.form-success {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: rgba(34,197,94,0.1);
-  border: 1px solid rgba(34,197,94,0.3);
-  border-radius: var(--radius-sm);
-  color: #4ade80;
-  font-weight: 500;
-  text-align: center;
-}
+.cq-form-group select option { background: var(--dark-4); }
+.cq-form-group textarea { resize: vertical; min-height: 100px; }
 
-.contact-info-panel {
-  background: var(--dark-4);
-  border: 1px solid rgba(201,168,76,0.15);
-  border-radius: var(--radius);
-  padding: 2.5rem;
-}
-.contact-info-panel h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--white);
-  margin-bottom: 2rem;
-}
-.contact-info-item {
+/* Time row */
+.cq-time-row {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(201,168,76,0.08);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
 }
-.contact-info-item:last-of-type { border-bottom: none; margin-bottom: 0; }
-.ci-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
-.contact-info-item div { display: flex; flex-direction: column; gap: 0.2rem; }
-.contact-info-item strong { color: var(--gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-.contact-info-item a { color: var(--light-2); font-size: 1rem; transition: color 0.2s; }
-.contact-info-item a:hover { color: var(--gold); }
-.contact-info-item span { color: var(--text-muted); font-size: 0.95rem; }
+.cq-time-row > div { display: flex; flex-direction: column; gap: 0.3rem; }
+.cq-time-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+.cq-time-row select {
+  background: var(--dark-5);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: var(--white);
+  font-size: 0.9rem;
+  min-width: 140px;
+}
 
-@media (max-width: 900px) {
-  .contact-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
+/* Actions */
+.cq-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
+.cq-submit-btn { padding: 0.9rem 2rem; font-size: 1rem; }
+.cq-contact-quick {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.cq-contact-quick a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.cq-contact-quick a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .cq-form-row { grid-template-columns: 1fr; }
+  .cq-form { padding: 1.5rem; }
+  .cq-form-actions { flex-direction: column; align-items: flex-start; }
+  .cq-booth-option { width: 120px; }
+}
+
 
 /* ── Booth Selector (inside contact) ── */
 .booth-selector {

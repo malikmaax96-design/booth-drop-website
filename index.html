@@ -438,141 +438,168 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="section-eyebrow">Get In Touch</p>
-        <h2 class="section-title">Send Us an Enquiry</h2>
-        <p class="section-desc">Not ready to book yet? Have a question? Fill in the form below and we'll get back to you as soon as possible.</p>
+        <h2 class="section-title">Contact Us &amp; Get a Quote</h2>
+        <p class="section-desc">Select your preferred booth below, fill in your details and we'll get back to you within 24 hours.</p>
       </div>
-      <div class="contact-grid reveal">
-        <form class="enquiry-form" id="enquiryForm" onsubmit="submitEnquiry(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="enquiryName">Your Name *</label>
-              <input type="text" id="enquiryName" name="name" placeholder="e.g. Sarah Johnson" required />
+
+      <!-- Booth Radio Selector -->
+      <div class="cq-booth-picker reveal">
+        <p class="cq-label">Which service are you interested in?</p>
+        <div class="cq-booth-row">
+
+          <label class="cq-booth-option">
+            <input type="radio" name="selectedBooth" value="Inflatable Booth" onchange="setCqBooth(this.value)" />
+            <div class="cq-booth-card">
+              <img src="images/booth-inflatable.jpg" alt="Inflatable Booth" />
+              <span>Inflatable Booth</span>
             </div>
-            <div class="form-group">
-              <label for="enquiryEmail">Email Address *</label>
-              <input type="email" id="enquiryEmail" name="email" placeholder="your@email.com" required />
+          </label>
+
+          <label class="cq-booth-option">
+            <input type="radio" name="selectedBooth" value="LCD SlimPod" onchange="setCqBooth(this.value)" />
+            <div class="cq-booth-card">
+              <img src="images/booth-slimpod.jpg" alt="LCD SlimPod" />
+              <span>LCD SlimPod</span>
             </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="enquiryPhone">Phone Number</label>
-              <input type="tel" id="enquiryPhone" name="phone" placeholder="07xxx xxxxxx" />
+          </label>
+
+          <label class="cq-booth-option">
+            <input type="radio" name="selectedBooth" value="Magic Mirror" onchange="setCqBooth(this.value)" />
+            <div class="cq-booth-card">
+              <img src="images/booth-magic.jpg" alt="Magic Mirror" />
+              <span>Magic Mirror</span>
             </div>
-            <div class="form-group">
-              <label for="enquiryEvent">Event Type</label>
-              <select id="enquiryEvent" name="event_type">
-                <option value="">Select event type...</option>
-                <option>Wedding</option>
-                <option>Birthday Party</option>
-                <option>Corporate Event</option>
-                <option>Prom / School Event</option>
-                <option>Baby Shower</option>
-                <option>Anniversary</option>
-                <option>Other</option>
-              </select>
+          </label>
+
+          <label class="cq-booth-option">
+            <input type="radio" name="selectedBooth" value="Retro Pod" onchange="setCqBooth(this.value)" />
+            <div class="cq-booth-card">
+              <img src="images/booth-retro.jpg" alt="Retro Pod" />
+              <span>Retro Pod</span>
             </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="enquiryBooth">Booth of Interest</label>
-              <select id="enquiryBooth" name="booth">
-                <option value="">Select a booth...</option>
-                <option>LCD SlimPod</option>
-                <option>Selfie Mirror Pod</option>
-                <option>Retro Pod</option>
-                <option>Magic Mirror</option>
-                <option>Party Booth</option>
-                <option>Inflatable Booth</option>
-                <option>GIF Booth</option>
-                <option>Not sure yet</option>
-              </select>
+          </label>
+
+          <label class="cq-booth-option">
+            <input type="radio" name="selectedBooth" value="Selfie Mirror Pod" onchange="setCqBooth(this.value)" />
+            <div class="cq-booth-card">
+              <img src="images/booth-selfie.jpg" alt="Selfie Mirror Pod" />
+              <span>Selfie Mirror Pod</span>
             </div>
-            <div class="form-group">
-              <label for="enquiryDate">Event Date</label>
-              <input type="date" id="enquiryDate" name="event_date" />
+          </label>
+
+          <label class="cq-booth-option">
+            <input type="radio" name="selectedBooth" value="Party Booth" onchange="setCqBooth(this.value)" />
+            <div class="cq-booth-card">
+              <img src="images/booth-party.jpg" alt="Party Booth" />
+              <span>Party Booth</span>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="enquiryMessage">Your Message *</label>
-            <textarea id="enquiryMessage" name="message" rows="5" placeholder="Tell us about your event, venue, number of guests, any special requirements..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary form-submit-btn" id="enquirySubmitBtn">Send Enquiry ✉️</button>
-          <div class="form-success" id="formSuccess" style="display:none;">
-            <span>✅</span> Thank you! We'll be in touch within 24 hours.
-          </div>
-        </form>
-        <div class="contact-info-panel">
-          <h3>Other Ways to Reach Us</h3>
-          <div class="contact-info-item">
-            <span class="ci-icon">📞</span>
-            <div>
-              <strong>Call Us</strong>
-              <a href="tel:07368631516">07368 631 516</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <span class="ci-icon">💬</span>
-            <div>
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/447368631516" target="_blank">Message us on WhatsApp</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <span class="ci-icon">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:info.boothdrop@boothdrop.co.uk">info.boothdrop@boothdrop.co.uk</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <span class="ci-icon">📍</span>
-            <div>
-              <strong>Coverage</strong>
-              <span>Serving London, Essex, Surrey, Hertfordshire &amp; beyond</span>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <span class="ci-icon">🕐</span>
-            <div>
-              <strong>Response Time</strong>
-              <span>We aim to reply within 24 hours</span>
-            </div>
-          </div>
-          <a href="#booking" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Ready to Book? →</a>
+          </label>
+
         </div>
       </div>
 
-      <!-- Booth Photo Selector -->
-      <div class="booth-selector reveal">
-        <h3 class="booth-selector-title">Which service are you interested in?</h3>
-        <div class="booth-selector-grid">
-          <a href="#booking" class="booth-sel-item" onclick="document.getElementById('enquiryBooth').value='LCD SlimPod'">
-            <img src="images/booth-slimpod.jpg" alt="LCD SlimPod" />
-            <span>LCD SlimPod</span>
-          </a>
-          <a href="#booking" class="booth-sel-item" onclick="document.getElementById('enquiryBooth').value='Magic Mirror'">
-            <img src="images/booth-magic.jpg" alt="Magic Mirror" />
-            <span>Magic Mirror</span>
-          </a>
-          <a href="#booking" class="booth-sel-item" onclick="document.getElementById('enquiryBooth').value='Retro Pod'">
-            <img src="images/booth-retro.jpg" alt="Retro Pod" />
-            <span>Retro Pod</span>
-          </a>
-          <a href="#booking" class="booth-sel-item" onclick="document.getElementById('enquiryBooth').value='Selfie Mirror Pod'">
-            <img src="images/booth-selfie.jpg" alt="Selfie Mirror Pod" />
-            <span>Selfie Mirror Pod</span>
-          </a>
-          <a href="#booking" class="booth-sel-item" onclick="document.getElementById('enquiryBooth').value='Party Booth'">
-            <img src="images/booth-party.jpg" alt="Party Booth" />
-            <span>Party Booth</span>
-          </a>
-          <a href="#booking" class="booth-sel-item" onclick="document.getElementById('enquiryBooth').value='Inflatable Booth'">
-            <img src="images/booth-inflatable.jpg" alt="Inflatable Booth" />
-            <span>Inflatable Booth</span>
-          </a>
+      <!-- Enquiry Form -->
+      <form class="cq-form reveal" id="enquiryForm" onsubmit="submitEnquiry(event)">
+        <input type="hidden" id="enquiryBooth" name="booth" value="" />
+
+        <div class="cq-form-row">
+          <div class="cq-form-group">
+            <label for="cqFirstName">First Name *</label>
+            <input type="text" id="cqFirstName" name="first_name" required />
+          </div>
+          <div class="cq-form-group">
+            <label for="cqLastName">Last Name *</label>
+            <input type="text" id="cqLastName" name="last_name" required />
+          </div>
         </div>
-        <p style="text-align:center;color:var(--text-muted);font-size:0.9rem;margin-top:1rem;">Click a booth to go straight to the booking form</p>
-      </div>
+
+        <div class="cq-form-row">
+          <div class="cq-form-group">
+            <label for="cqEmail">Email *</label>
+            <input type="email" id="cqEmail" name="email" required />
+          </div>
+          <div class="cq-form-group">
+            <label for="cqTel">Telephone *</label>
+            <input type="tel" id="cqTel" name="telephone" required />
+          </div>
+        </div>
+
+        <div class="cq-form-row">
+          <div class="cq-form-group">
+            <label for="cqDate">Event Date</label>
+            <input type="date" id="cqDate" name="event_date" />
+          </div>
+          <div class="cq-form-group">
+            <label for="cqEventType">Event Type *</label>
+            <select id="cqEventType" name="event_type" required>
+              <option value="">— Select —</option>
+              <option>Wedding</option>
+              <option>Birthday Party</option>
+              <option>Corporate Event</option>
+              <option>Prom / School Event</option>
+              <option>Baby Shower</option>
+              <option>Anniversary</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cq-form-group cq-full">
+          <label>Event Time</label>
+          <div class="cq-time-row">
+            <div>
+              <span class="cq-time-label">Start Time</span>
+              <select id="cqStartTime" name="start_time">
+                <option value="">Please Select</option>
+                <option>6:00 AM</option><option>7:00 AM</option><option>8:00 AM</option>
+                <option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option>
+                <option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option>
+                <option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option>
+                <option>9:00 PM</option><option>10:00 PM</option><option>11:00 PM</option>
+              </select>
+            </div>
+            <div>
+              <span class="cq-time-label">End Time</span>
+              <select id="cqEndTime" name="end_time">
+                <option value="">Please Select</option>
+                <option>6:00 AM</option><option>7:00 AM</option><option>8:00 AM</option>
+                <option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option>
+                <option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option>
+                <option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option>
+                <option>9:00 PM</option><option>10:00 PM</option><option>11:00 PM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="cq-form-row">
+          <div class="cq-form-group cq-full">
+            <label for="cqPostcode">Postcode</label>
+            <input type="text" id="cqPostcode" name="postcode" placeholder="e.g. LU1 1AA" />
+          </div>
+        </div>
+
+        <div class="cq-form-group cq-full">
+          <label for="cqNotes">Additional Notes</label>
+          <textarea id="cqNotes" name="notes" rows="4" placeholder="Tell us about your event, venue, number of guests, any special requirements..."></textarea>
+        </div>
+
+        <div class="cq-form-actions">
+          <button type="submit" class="btn-primary cq-submit-btn" id="enquirySubmitBtn">Send Enquiry ✉️</button>
+          <div class="cq-contact-quick">
+            <a href="tel:07368631516">📞 07368 631 516</a>
+            <a href="https://wa.me/447368631516" target="_blank">💬 WhatsApp Us</a>
+            <a href="mailto:info.boothdrop@boothdrop.co.uk">✉️ Email Us</a>
+          </div>
+        </div>
+
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <span>✅</span> Thank you! We'll be in touch within 24 hours.
+        </div>
+      </form>
+
     </div>
   </section>
 

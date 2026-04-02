@@ -273,41 +273,49 @@ function initFooterBoothLinks() {
   });
 }
 
+/* ── Set selected booth from radio picker ── */
+function setCqBooth(value) {
+  document.getElementById('enquiryBooth').value = value;
+}
+window.setCqBooth = setCqBooth;
+
 /* ── Enquiry Form Submit ── */
 function submitEnquiry(e) {
   e.preventDefault();
-  const btn = document.getElementById('enquirySubmitBtn');
+  const btn  = document.getElementById('enquirySubmitBtn');
   const success = document.getElementById('formSuccess');
   const form = document.getElementById('enquiryForm');
 
-  const name    = document.getElementById('enquiryName').value;
-  const email   = document.getElementById('enquiryEmail').value;
-  const phone   = document.getElementById('enquiryPhone').value;
-  const event   = document.getElementById('enquiryEvent').value;
-  const booth   = document.getElementById('enquiryBooth').value;
-  const date    = document.getElementById('enquiryDate').value;
-  const message = document.getElementById('enquiryMessage').value;
+  const booth     = document.getElementById('enquiryBooth').value || 'Not specified';
+  const firstName = (document.getElementById('cqFirstName')  || {}).value || '';
+  const lastName  = (document.getElementById('cqLastName')   || {}).value || '';
+  const email     = (document.getElementById('cqEmail')      || {}).value || '';
+  const phone     = (document.getElementById('cqTel')        || {}).value || '';
+  const date      = (document.getElementById('cqDate')       || {}).value || '';
+  const eventType = (document.getElementById('cqEventType')  || {}).value || '';
+  const startTime = (document.getElementById('cqStartTime')  || {}).value || '';
+  const endTime   = (document.getElementById('cqEndTime')    || {}).value || '';
+  const postcode  = (document.getElementById('cqPostcode')   || {}).value || '';
+  const notes     = (document.getElementById('cqNotes')      || {}).value || '';
 
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  // Build WhatsApp message as fallback delivery
   const waText = encodeURIComponent(
-    `New Enquiry from Website!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nEvent: ${event}\nBooth: ${booth}\nDate: ${date}\n\nMessage: ${message}`
+    `New Enquiry from Website!\n\nBooth: ${booth}\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nEvent Type: ${eventType}\nTime: ${startTime} – ${endTime}\nPostcode: ${postcode}\n\nNotes: ${notes}`
   );
 
-  // Show success & open WhatsApp after short delay
   setTimeout(() => {
     success.style.display = 'block';
     form.reset();
     btn.textContent = 'Send Enquiry ✉️';
     btn.disabled = false;
-    // Deliver via WhatsApp
     window.open(`https://wa.me/447368631516?text=${waText}`, '_blank');
   }, 800);
 }
 
 window.submitEnquiry = submitEnquiry;
+
 
 /* ── Gallery Filter ── */
 function initGalleryFilter() {
