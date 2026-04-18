@@ -119,20 +119,16 @@ function initNav() {
   });
 }
 
-/* ── Booth Cards → Open Modal ── */
+/* ── Booth Cards → now linked to pages, no modal needed ── */
 function initBoothCards() {
-  document.querySelectorAll('.booth-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const key = card.dataset.booth;
-      openModal(key);
-    });
-  });
+  // Booth cards are now <a> tags linking to detail pages — no action needed
 }
 
-/* ── Modal ── */
+/* ── Modal (kept for backward compat, safely guarded) ── */
 function initModal() {
   const backdrop = document.getElementById('modalBackdrop');
   const closeBtn = document.getElementById('modalClose');
+  if (!backdrop || !closeBtn) return; // modal HTML removed — skip safely
 
   closeBtn.addEventListener('click', closeModal);
   backdrop.addEventListener('click', e => {
