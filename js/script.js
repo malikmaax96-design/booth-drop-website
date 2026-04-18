@@ -346,9 +346,18 @@ function initGalleryFilter() {
 /* ── Scroll Reveal ── */
 function initScrollReveal() {
   const revealEls = document.querySelectorAll('.reveal');
+  if (!revealEls.length) return;
 
-  // Fallback: if IntersectionObserver not  supported, just show everything
+  // Tell CSS that JS is working — only then will elements be hidden for animation
+  document.documentElement.classList.add('js-on');
+
+  // Emergency fallback: if IntersectionObserver fails or is slow, show everything after 800ms
+  const emergencyTimer = setTimeout(() => {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }, 800);
+
   if (!('IntersectionObserver' in window)) {
+    clearTimeout(emergencyTimer);
     revealEls.forEach(el => el.classList.add('visible'));
     return;
   }
@@ -361,12 +370,12 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.08,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   revealEls.forEach((el, i) => {
-    el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+    el.style.transitionDelay = `${(i % 3) * 0.08}s`;
     observer.observe(el);
   });
 }
