@@ -293,6 +293,31 @@
   transition: opacity 0.35s ease;
 }
 .bd-photo-item:hover .bd-photo-overlay { opacity: 1; }
+
+/* SINGLE PHOTO SPOTLIGHT */
+.bd-photo-spotlight {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 600px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+.bd-photo-spotlight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  max-height: 600px;
+  transition: transform 0.5s ease;
+}
+.bd-photo-spotlight:hover img { transform: scale(1.03); }
+.bd-photo-spotlight .bd-photo-overlay {
+  opacity: 1;
+  background: linear-gradient(to top, rgba(10,10,15,0.6) 0%, transparent 50%);
+}
+
 .bd-photo-overlay span {
   color: var(--white);
   font-size: 0.95rem;
