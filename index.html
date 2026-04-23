@@ -31,6 +31,16 @@
 </head>
 <body>
 
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="promo-bar" id="promoBar">
+    <div class="promo-bar-inner">
+      <span class="promo-item active">✨ <strong>SPECIAL OFFER:</strong> Book Mon–Thu and get <strong>5% OFF</strong> your booking! ✨</span>
+      <span class="promo-item">🎉 <strong>LIMITED TIME:</strong> Book <strong>3 Hours</strong> and get <strong>1 Hour FREE</strong>! (4 hours for the price of 3)</span>
+      <span class="promo-item">📸 <strong>LCD SlimPod</strong> from just <strong>£239</strong> — Most Popular Booth!</span>
+    </div>
+    <button class="promo-close" onclick="document.getElementById('promoBar').style.display='none'" aria-label="Close">×</button>
+  </div>
+
   <!-- NAV -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
@@ -85,6 +95,38 @@
       <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Booth Types</span></div>
       <div class="stat-item"><span class="stat-num">30+</span><span class="stat-label">Areas Served</span></div>
       <div class="stat-item"><span class="stat-num">5★</span><span class="stat-label">Customer Rating</span></div>
+    </div>
+  </section>
+
+  <!-- SPECIAL OFFERS -->
+  <section class="special-offers section" id="offers">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Limited Time</p>
+        <h2 class="section-title">Special Offers</h2>
+        <p class="section-desc">Take advantage of our exclusive deals — don't miss out!</p>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card reveal">
+          <div class="offer-badge">⏰ Limited Time</div>
+          <div class="offer-icon">📅</div>
+          <h3 class="offer-title">Weekday Discount</h3>
+          <div class="offer-highlight">5% OFF</div>
+          <p class="offer-desc">Book your photo booth for a <strong>Monday to Thursday</strong> event and enjoy an exclusive <strong>5% discount</strong> on your booking. Perfect for corporate events, private parties & more!</p>
+          <div class="offer-tag">Mon – Thu Bookings Only</div>
+          <a href="#contact" class="btn-primary offer-btn">Claim This Offer</a>
+        </div>
+        <div class="offer-card offer-card--featured reveal">
+          <div class="offer-badge offer-badge--gold">🔥 Most Popular</div>
+          <div class="offer-icon">🎉</div>
+          <h3 class="offer-title">Book 3, Get 1 FREE</h3>
+          <div class="offer-highlight">4 Hours for<br><small>the price of 3!</small></div>
+          <p class="offer-desc">Book any of our photo booths for <strong>3 hours</strong> and we'll throw in an <strong>extra hour completely free</strong>. That's 4 full hours of unlimited fun for your guests!</p>
+          <div class="offer-tag">All Booths · All Days</div>
+          <a href="#contact" class="btn-primary offer-btn">Claim This Offer</a>
+        </div>
+      </div>
+      <p class="offers-disclaimer">* Offers cannot be combined. Subject to availability. Contact us to apply your discount.</p>
     </div>
   </section>
 
