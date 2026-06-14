@@ -183,7 +183,7 @@ section.hero:not(#home) p { font-size: 1.05rem; opacity: 0.9; }
 
 /* ---- Booths Grid ---- */
 .booths-section { background: #fff; }
-.booths-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 18px; }
+.booths-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .booth-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid var(--border); }
 .booth-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
 .booth-img-wrap { position: relative; aspect-ratio: 3/4; overflow: hidden; background: #f3f4f6; }
