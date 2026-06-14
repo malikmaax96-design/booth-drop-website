@@ -3,6 +3,7 @@
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('js-on');
   initNav();
   initScrollReveal();
 });
